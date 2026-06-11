@@ -35,7 +35,7 @@ export default function MarcasCarrusel() {
 
       gsap.to(track, {
         x: `-=${totalWidth}`,
-        duration: 25,
+        duration: 35,
         ease: "none",
         repeat: -1,
         modifiers: {
@@ -51,7 +51,7 @@ export default function MarcasCarrusel() {
 
   return (
     <section ref={sectionRef} style={{
-      background: "var(--color-cream)",
+      background: "#ffffff",
       padding: "80px 0",
       overflow: "hidden",
     }}>
@@ -78,16 +78,16 @@ export default function MarcasCarrusel() {
       <div style={{ position: "relative" }}>
         <div style={{
           position: "absolute", left: 0, top: 0, bottom: 0, width: "120px", zIndex: 1,
-          background: "linear-gradient(to right, var(--color-cream), transparent)",
+          background: "linear-gradient(to right, #ffffff, transparent)",
         }} />
         <div style={{
           position: "absolute", right: 0, top: 0, bottom: 0, width: "120px", zIndex: 1,
-          background: "linear-gradient(to left, var(--color-cream), transparent)",
+          background: "linear-gradient(to left, #ffffff, transparent)",
         }} />
 
         <div ref={trackRef} style={{
           display: "flex",
-          gap: "48px",
+          gap: "24px",
           alignItems: "center",
           width: "max-content",
           padding: "16px 0",
@@ -95,13 +95,13 @@ export default function MarcasCarrusel() {
           {allMarcas.map((marca, i) => (
             <div key={`${marca}-${i}`} style={{
               position: "relative",
-              width: "400px",
-              height: "200px",
+              width: "300px",
+              height: "190px",
               flexShrink: 0,
               filter: "grayscale(100%)",
-              opacity: 0.8,
-              transition: "all 0.5s ease",
-              mixBlendMode: "multiply",
+              opacity: 0.6,
+              transition: "all 0.3s ease",
+              mixBlendMode: "multiply" as React.CSSProperties["mixBlendMode"],
             }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLDivElement).style.filter = "grayscale(0%)";
