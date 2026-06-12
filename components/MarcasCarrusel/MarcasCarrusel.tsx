@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styles from "./MarcasCarrusel.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,68 +51,23 @@ export default function MarcasCarrusel() {
   const allMarcas = [...marcas, ...marcas];
 
   return (
-    <section ref={sectionRef} style={{
-      background: "#ffffff",
-      padding: "80px 0",
-      overflow: "hidden",
-    }}>
-      <div style={{ padding: "0 80px", marginBottom: "48px" }}>
-        <div ref={tagRef} style={{ opacity: 0, display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-          <span style={{ width: "28px", height: "1px", background: "var(--color-bordo)" }} />
-          <span style={{ fontSize: "11px", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--color-bordo)" }}>
-            Nuestras marcas
-          </span>
+    <section ref={sectionRef} className={styles.section}>
+      <div className={styles.header}>
+        <div ref={tagRef} className={styles.tag}>
+          <span className={styles.tagLine} />
+          <span className={styles.tagText}>Nuestras marcas</span>
         </div>
-        <h2 ref={titleRef} style={{
-          opacity: 0,
-          fontFamily: "var(--font-title)",
-          fontSize: "36px",
-          fontWeight: 500,
-          fontStyle: "italic",
-          color: "var(--color-bordo-dark)",
-          lineHeight: 1.15,
-        }}>
-          Marcas que confían <span style={{ color: "var(--color-bordo)" }}>en nosotros</span>
+        <h2 ref={titleRef} className={styles.title}>
+          Marcas que confían <span className={styles.titleAccent}>en nosotros</span>
         </h2>
       </div>
 
-      <div style={{ position: "relative" }}>
-        <div style={{
-          position: "absolute", left: 0, top: 0, bottom: 0, width: "120px", zIndex: 1,
-          background: "linear-gradient(to right, #ffffff, transparent)",
-        }} />
-        <div style={{
-          position: "absolute", right: 0, top: 0, bottom: 0, width: "120px", zIndex: 1,
-          background: "linear-gradient(to left, #ffffff, transparent)",
-        }} />
-
-        <div ref={trackRef} style={{
-          display: "flex",
-          gap: "24px",
-          alignItems: "center",
-          width: "max-content",
-          padding: "16px 0",
-        }}>
+      <div className={styles.trackWrapper}>
+        <div className={styles.fadeLeft} />
+        <div className={styles.fadeRight} />
+        <div ref={trackRef} className={styles.track}>
           {allMarcas.map((marca, i) => (
-            <div key={`${marca}-${i}`} style={{
-              position: "relative",
-              width: "300px",
-              height: "190px",
-              flexShrink: 0,
-              filter: "grayscale(100%)",
-              opacity: 0.6,
-              transition: "all 0.3s ease",
-              mixBlendMode: "multiply" as React.CSSProperties["mixBlendMode"],
-            }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.filter = "grayscale(0%)";
-                (e.currentTarget as HTMLDivElement).style.opacity = "1";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLDivElement).style.filter = "grayscale(100%)";
-                (e.currentTarget as HTMLDivElement).style.opacity = "0.6";
-              }}
-            >
+            <div key={`${marca}-${i}`} className={styles.logo}>
               <Image
                 src={`/marcas/${marca}.png`}
                 alt={marca}

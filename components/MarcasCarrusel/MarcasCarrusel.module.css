@@ -1,0 +1,93 @@
+.section {
+  background: #ffffff;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 80px;
+  margin-bottom: 48px;
+}
+
+.tag {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tagLine {
+  width: 28px;
+  height: 1px;
+  background: var(--color-bordo);
+}
+
+.tagText {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-bordo);
+}
+
+.title {
+  opacity: 0;
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-bordo-dark);
+  line-height: 1.15;
+}
+
+.titleAccent {
+  color: var(--color-bordo);
+}
+
+.trackWrapper {
+  position: relative;
+}
+
+.fadeLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 1;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.fadeRight {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 1;
+  background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.track {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: max-content;
+  padding: 16px 0;
+}
+
+.logo {
+  position: relative;
+  width: 300px;
+  height: 190px;
+  flex-shrink: 0;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  mix-blend-mode: multiply;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}

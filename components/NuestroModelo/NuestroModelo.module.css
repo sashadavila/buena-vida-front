@@ -1,0 +1,115 @@
+.section {
+  background: var(--color-bordo-dark);
+  padding: 100px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+}
+
+.imgWrapper {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-bordo-dark) 0%, transparent 60%);
+}
+
+.right {
+  opacity: 0;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tagLine {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.tagText {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 38px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-cream);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.titleAccent {
+  color: var(--color-gold);
+}
+
+.text {
+  font-size: 15px;
+  color: var(--color-cream);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
+
+.textLast {
+  font-size: 15px;
+  color: var(--color-cream);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  opacity: 0.85;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bulletDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bulletDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+.bulletText {
+  font-size: 14px;
+  color: var(--color-cream);
+  opacity: 0.85;
+}

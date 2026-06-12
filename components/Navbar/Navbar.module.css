@@ -1,0 +1,58 @@
+.nav {
+  background: var(--color-cream);
+  border-bottom: 0.5px solid var(--color-gold);
+  padding: 0 32px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.4s ease;
+}
+
+.navScrolled {
+  background: rgba(245, 240, 232, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoText {
+  font-family: var(--font-title);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--color-bordo-dark);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+}
+
+.link {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-bordo);
+  cursor: pointer;
+}
+
+.cta {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  background: var(--color-bordo);
+  padding: 8px 18px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}

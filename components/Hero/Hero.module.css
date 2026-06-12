@@ -1,0 +1,116 @@
+.section {
+  position: relative;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  background: var(--color-bordo-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tagLine {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.tagText {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.title {
+  opacity: 0;
+  font-family: var(--font-title);
+  font-size: 52px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-cream);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.titleAccent {
+  color: var(--color-gold);
+}
+
+.sub {
+  opacity: 0;
+  font-size: 15px;
+  color: var(--color-gold);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btns {
+  opacity: 0;
+  display: flex;
+  gap: 14px;
+}
+
+.btnPrimary {
+  background: var(--color-gold);
+  color: var(--color-bordo-dark);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  border-radius: 2px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnPrimary:hover {
+  background: transparent;
+  color: var(--color-gold);
+  border: 0.5px solid var(--color-gold);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--color-gold);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  border-radius: 2px;
+  border: 0.5px solid var(--color-gold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: var(--color-gold);
+  color: var(--color-bordo-dark);
+}
+
+.right {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-bordo-dark) 0%, transparent 100%);
+}

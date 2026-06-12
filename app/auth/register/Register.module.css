@@ -1,0 +1,203 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bordo-dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  gap: 32px;
+}
+
+.leftTitle {
+  font-family: var(--font-title);
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-cream);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.leftTitleAccent {
+  color: var(--color-gold);
+}
+
+.leftSub {
+  font-size: 13px;
+  color: var(--color-gold);
+  opacity: 0.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.right {
+  background: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-bordo);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.form {
+  opacity: 0;
+}
+
+.inputWrapper {
+  margin-bottom: 16px;
+}
+
+.inputWrapperLast {
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-bordo-dark);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 0.5px solid var(--color-cream-dark);
+  background: #fff;
+  font-size: 14px;
+  color: var(--color-bordo-dark);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.inputError {
+  border: 0.5px solid #a32d2d;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.eyeBtn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-bordo);
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: #a32d2d;
+  margin-top: 6px;
+}
+
+.rolesLabel {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-bordo);
+  margin-bottom: 12px;
+}
+
+.rolesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.roleBtn {
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 0.5px solid var(--color-cream-dark);
+  background: #fff;
+  color: var(--color-bordo-dark);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 400;
+}
+
+.roleBtnActive {
+  border: 1.5px solid var(--color-bordo);
+  background: var(--color-bordo-dark);
+  color: var(--color-cream);
+  font-weight: 500;
+}
+
+.rolesWrapper {
+  margin-bottom: 28px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 4px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #333;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--color-bordo-dark);
+  opacity: 0.7;
+}
+
+.footerLink {
+  font-size: 13px;
+  color: var(--color-bordo);
+  font-weight: 500;
+  cursor: pointer;
+}
